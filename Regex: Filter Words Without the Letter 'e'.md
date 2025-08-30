@@ -14,7 +14,24 @@ To write a Python program that filters out and returns all elements from a list 
 5. Print the final filtered list.
 
 ## 🧾 Program
-Add code here
+```
+import re
+
+def filter_without_e(words):
+
+    pattern = re.compile(r'^[^eE]*$')
+    
+   
+    return [word for word in words if pattern.match(word)]
+
+words_list = ["apple", "sky", "dog", "tree", "milk", "sun"]
+result = filter_without_e(words_list)
+
+print("Original list:", words_list)
+print("Filtered list (without 'e'):", result)
+```
+
 ## Output
 
 ## Result
+thus the program is executed successfully.
